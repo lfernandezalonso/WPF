@@ -7,10 +7,17 @@ namespace MyChronometerWPFApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window //MainWindow(ITimerManager _timerManager 
+    public partial class MainWindow : Window 
     {
         private MyAbstractChronometer ch;
 
+        /*
+         * Aquí en la clase de la ventana principal "MainWindow" de la aplicación, se ve el principio de Inversión de Independencia (DIP) porque en vez de confiar / 
+         * depender de clases concretas, estamos confiando/dependiendo de clases abstractas ó interfaces. O sea, la clase de alto nivel "MainWindow" aquí depende
+         * de la interface "ITimerManager" y de la clase abstracta "MyTimerChronometer".
+         * Además usando el mecanismo de Inversion de la dependencia propio de .NET Framework le estoy inyectando la clase "MyDispatcherTimerManager" que implementa
+         * la interfaz "ITimerManager" a la instancia de la clase "MainWindow".
+         */
         private readonly ITimerManager timerManager;
 
         public void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -30,7 +37,7 @@ namespace MyChronometerWPFApp
             InitializeComponent();
         }
 
-        public MainWindow(ITimerManager _timerManager) /* : this() */
+        public MainWindow(ITimerManager _timerManager)
         {
             InitializeComponent();
 

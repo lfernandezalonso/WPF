@@ -19,4 +19,9 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.3" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="MainWindow.xaml.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
 </Project>
