@@ -1,0 +1,16 @@
+﻿<Window x:Class="MyChronometerWPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyChronometerWPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="960">
+    <Grid>
+        <Label x:Name="lblTimeDisplay" Content="lblTimeDisplay" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" Height="145" Width="840" FontSize="102" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="60,359,0,0" VerticalAlignment="Top" Width="180" Height="45" Click="btnStart_Click"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="400,359,0,0" VerticalAlignment="Top" Width="180" Height="45" Click="btnPause_Click"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="720,359,0,0" VerticalAlignment="Top" Width="180" Height="45" Click="btnStop_Click"/>
+
+    </Grid>
+</Window>
